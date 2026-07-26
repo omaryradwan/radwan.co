@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+
+# cloudflare/wrangler
+.wrangler/
+
+# local scratch
+_measure.html
+_frames.html
+_m*.html

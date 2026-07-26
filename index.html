@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>radwan/co</title>
+    <meta
+      name="description"
+      content="radwan/co is a holding company for business-to-business and direct-to-consumer brands."
+    />
+    <link rel="canonical" href="https://radwan.co/" />
+    <meta name="theme-color" content="#f4f2ec" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="radwan/co" />
+    <meta property="og:title" content="radwan/co" />
+    <meta
+      property="og:description"
+      content="A holding company for business-to-business and direct-to-consumer brands."
+    />
+    <meta property="og:url" content="https://radwan.co/" />
+    <meta property="og:image" content="https://radwan.co/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="radwan/co" />
+    <meta
+      property="twitter:description"
+      content="A holding company for business-to-business and direct-to-consumer brands."
+    />
+    <meta property="twitter:image" content="https://radwan.co/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://radwan.co/#org",
+        "name": "radwan/co",
+        "legalName": "Radwan Company",
+        "url": "https://radwan.co/",
+        "logo": "https://radwan.co/wordmark.png",
+        "description": "A holding company for business-to-business and direct-to-consumer brands."
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Type and palette are inherited from the radwan&co brand sheet:
+         Roboto Mono 500 for the lockup and eyebrows, Newsreader 300 for body,
+         and the #0000FB accent system. */
+      :root {
+        --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        --font-serif: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", serif;
+
+        --color-paper: #f4f2ec;
+        --color-paper-card: #faf8f3;
+        --color-ink: #0d0d0d;
+        --color-offwhite: #f4f2ec;
+
+        /* Muted holds WCAG AA (4.5:1) against both paper surfaces: 5.0:1 on
+           paper, 5.3:1 on card. */
+        --color-muted: #6e6759;
+        --color-rule: rgba(0, 0, 0, 0.12);
+
+        --color-accent: #0000fb;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        border-color: var(--color-rule);
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-serif);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      ::selection {
+        background-color: var(--color-accent);
+        color: var(--color-paper);
+      }
+
+      button {
+        font: inherit;
+        color: inherit;
+        outline-offset: 2px;
+        outline-color: var(--color-accent);
+      }
+
+      button:focus-visible {
+        outline-style: dashed;
+        outline-width: 2px;
+      }
+
+      button:not(:disabled) {
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 44rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+      }
+
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-muted);
+        font-weight: 600;
+      }
+
+      /* Rule 01: "radwan" and "co" share one color; the separator is the
+         accent. An all-one-color lockup is forbidden. Rule 02: the lockup sits
+         on white, paper, medium grey, dark grey, or black — never on blue. */
+      .lockup {
+        font-family: var(--font-mono);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        white-space: nowrap;
+      }
+
+      .lockup .sep {
+        color: var(--color-accent);
+        font-weight: 500;
+      }
+
+      main {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        padding-block: 4rem;
+      }
+
+      .wordmark {
+        display: block;
+        font-size: clamp(2.25rem, 11vw, 4.5rem);
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      .divider {
+        border: 0;
+        border-top: 1px solid var(--color-rule);
+        margin: 2.75rem 0 0;
+      }
+
+      .contact {
+        margin-top: 1.75rem;
+      }
+
+      .contact .eyebrow {
+        display: block;
+        margin-bottom: 0.9rem;
+      }
+
+      .mail {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .mail-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9rem;
+        border: 1px solid var(--color-rule);
+        border-radius: 0.375rem;
+        background-color: var(--color-paper-card);
+        padding: 0.55rem 1rem;
+        color: var(--color-ink);
+        transition:
+          border-color 150ms ease,
+          color 150ms ease;
+      }
+
+      .mail-button:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+      }
+
+      .mail-address {
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+      }
+
+      .mail-cta {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-muted);
+        font-weight: 600;
+      }
+
+      .mail-button:hover .mail-cta {
+        color: var(--color-accent);
+      }
+
+      .mail-toast {
+        pointer-events: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 0.5rem;
+        white-space: nowrap;
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        background-color: var(--color-ink);
+        color: var(--color-paper-card);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 150ms ease;
+      }
+
+      footer {
+        margin-top: auto;
+        padding-bottom: 2.5rem;
+      }
+
+      .legal {
+        border-top: 1px solid var(--color-rule);
+        padding-top: 1.5rem;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+        color: var(--color-muted);
+      }
+
+      .legal .lockup {
+        font-size: 0.875rem;
+        color: var(--color-ink);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="wordmark lockup" aria-label="radwan co">
+          radwan<span class="sep" aria-hidden="true">/</span>co
+        </h1>
+
+        <hr class="divider" />
+
+        <div class="contact">
+          <span class="eyebrow">Email</span>
+
+          <!-- The address is split into two data attributes and reassembled
+               with U+0040 inside the click handler, so the served HTML never
+               contains the literal "user@domain" string. This defeats edge
+               obfuscation rewrites and naive scrapers without hurting
+               accessibility. -->
+          <span class="mail">
+            <button
+              type="button"
+              class="mail-button"
+              title="Copy email address"
+              aria-label="Copy email address"
+              data-mail-copy
+              data-mail-user="omar"
+              data-mail-domain="radwan.co"
+            >
+              <span class="mail-address"
+                >omar<span aria-hidden="true">&#64;</span>radwan.co</span
+              >
+              <span class="mail-cta">Copy</span>
+            </button>
+            <span class="mail-toast" data-mail-toast aria-live="polite">Copied</span>
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="legal">
+          <span class="lockup" aria-label="radwan co"
+            >r<span class="sep" aria-hidden="true">/</span></span
+          >
+          <span aria-hidden="true">·</span>
+          <span>&copy; <span data-year>2026</span> Radwan Company</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        // Keep the copyright current without a rebuild; the markup ships with a
+        // correct year so the line still reads properly with JS disabled.
+        var year = document.querySelector("[data-year]");
+        if (year) year.textContent = String(new Date().getFullYear());
+
+        var btn = document.querySelector("button[data-mail-copy]");
+        if (!btn) return;
+        var toastTimer = 0;
+
+        btn.addEventListener("click", async function () {
+          var u = btn.getAttribute("data-mail-user");
+          var d = btn.getAttribute("data-mail-domain");
+          if (!u || !d) return;
+          var address = u + "\u0040" + d;
+          var ok = false;
+
+          try {
+            await navigator.clipboard.writeText(address);
+            ok = true;
+          } catch (e) {
+            var tmp = document.createElement("input");
+            tmp.value = address;
+            tmp.setAttribute("readonly", "");
+            tmp.style.position = "fixed";
+            tmp.style.opacity = "0";
+            document.body.appendChild(tmp);
+            tmp.select();
+            try {
+              ok = document.execCommand("copy");
+            } catch (e2) {}
+            tmp.remove();
+          }
+
+          var toast = btn.parentElement.querySelector("[data-mail-toast]");
+          if (!toast) return;
+          toast.textContent = ok ? "Copied" : "Press ⌘C to copy";
+          toast.style.opacity = "1";
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () {
+            toast.style.opacity = "0";
+          }, 1400);
+        });
+      })();
+    </script>
+  </body>
+</html>
